@@ -1,4 +1,4 @@
-# NotebookLM Clone with Voice Assistant: Complete Implementation Guide
+# PQC oice Assistant: Complete Implementation Guide
 
 ## Executive Summary
 
@@ -9,7 +9,7 @@ This guide provides a step-by-step implementation plan to transform your **Ogumm
 - **Function calling** for action-oriented tasks
 - **Hybrid memory system** (Vector + Relational + Topic Clustering)
 - **Report generation** (Briefing docs, FAQs, Study guides)
-
+Learn more at:  https://quantropi.com
 ---
 
 ## Architecture Overview
