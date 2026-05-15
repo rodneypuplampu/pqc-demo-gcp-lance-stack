@@ -1,4 +1,4 @@
-# PQC oice Assistant: Complete Implementation Guide
+# PQC AI Agent Assistant: Complete Implementation Guide
 
 ## Executive Summary
 
