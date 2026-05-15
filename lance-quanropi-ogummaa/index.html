@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gummaa-Atlas · Cognitive Historical Mapping</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <!-- Google Maps -->
+  <script defer src="https://maps.googleapis.com/maps/api/js?key=__GMAPS_API_KEY__&libraries=marker&callback=initMap"></script>
+</head>
+<body>
+
+  <!-- Animated background blobs -->
+  <div class="bg-canvas" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="grain"></div>
+  </div>
+
+  <!-- Top navigation bar -->
+  <header class="topbar">
+    <div class="topbar-brand">
+      <span class="brand-glyph">⊕</span>
+      <span class="brand-name">Gummaa<em>Atlas</em></span>
+    </div>
+    <nav class="topbar-nav">
+      <button class="nav-btn active" data-panel="chat">Chat</button>
+      <button class="nav-btn" data-panel="memory">Memory</button>
+    </nav>
+    <div class="topbar-status">
+      <span class="status-dot" id="statusDot"></span>
+      <span class="status-label" id="statusLabel">Connecting…</span>
+    </div>
+  </header>
+
+  <!-- Main layout -->
+  <main class="layout">
+
+    <!-- ── Left: Chat panel ──────────────────────────────────── -->
+    <section class="panel panel-chat" id="panelChat">
+      <div class="panel-header">
+        <h2>Historical Intelligence</h2>
+        <p class="panel-subtitle">Cognitive Memory · Multi-Agent Synthesis</p>
+      </div>
+
+      <div class="messages" id="messages" role="log" aria-live="polite">
+        <!-- Welcome message -->
+        <div class="msg msg-ai">
+          <div class="msg-avatar">G</div>
+          <div class="msg-body">
+            <p>
+              Greetings. I am <strong>Gummaa-Atlas</strong>, a cognitive
+              historical intelligence powered by an active memory substrate
+              spanning millennia of Pan-African civilisation.
+            </p>
+            <p>
+              Ask about empires, trade routes, leaders, or events. Click
+              anywhere on the map to anchor your query to a specific coordinate.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coordinate indicator -->
+      <div class="coord-badge" id="coordBadge" hidden>
+        <span class="coord-icon">⊕</span>
+        <span id="coordText">No location selected</span>
+        <button class="coord-clear" id="coordClear" title="Clear location">✕</button>
+      </div>
+
+      <!-- Input area -->
+      <div class="input-area">
+        <textarea
+          id="userInput"
+          class="chat-input"
+          placeholder="Ask about African history, trade routes, empires…"
+          rows="3"
+          autofocus
+        ></textarea>
+        <button class="send-btn" id="sendBtn" title="Send">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="22" y1="2" x2="11" y2="13" />
+            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ── Right: Map panel ──────────────────────────────────── -->
+    <section class="panel panel-map" id="panelMap">
+      <div class="panel-header map-header">
+        <h2>Geospatial Canvas</h2>
+        <div class="map-controls">
+          <button class="map-ctrl-btn" id="btnClearMarkers" title="Clear markers">Clear</button>
+          <button class="map-ctrl-btn" id="btnCenterAfrica" title="Centre on Africa">Africa</button>
+        </div>
+      </div>
+      <div id="map" class="map-container"></div>
+      <div class="map-legend" id="mapLegend"></div>
+    </section>
+
+    <!-- ── Memory panel (hidden by default) ─────────────────── -->
+    <section class="panel panel-memory" id="panelMemory" hidden>
+      <div class="panel-header">
+        <h2>Cognitive Memory</h2>
+        <p class="panel-subtitle">Active knowledge substrate — Lance Blob V2</p>
+      </div>
+      <div id="memoryStats" class="memory-stats">
+        <div class="stat-card"><span class="stat-label">Table</span><span class="stat-value" id="memTable">—</span></div>
+        <div class="stat-card"><span class="stat-label">Records</span><span class="stat-value" id="memRows">—</span></div>
+        <div class="stat-card"><span class="stat-label">Embedding Dim</span><span class="stat-value" id="memDim">—</span></div>
+      </div>
+      <div class="memory-records" id="memoryRecords"></div>
+      <div class="memory-actions">
+        <button class="action-btn" id="btnRefreshMem">↺ Refresh</button>
+        <button class="action-btn danger" id="btnPruneMem">⊘ Prune (30d TTL)</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
