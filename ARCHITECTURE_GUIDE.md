@@ -10,7 +10,7 @@ Gummaa-Atlas is a multi-agent orchestration system designed to provide historica
 ### Prerequisites
 - Python 3.9+
 - Google Cloud Project with Vertex AI enabled
-- Gemini API access (`gemini-2.5-flash`)
+- Gemini API
 - LanceDB
 
 ### Setup & Installation
