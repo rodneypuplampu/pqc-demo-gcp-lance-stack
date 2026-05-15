@@ -1,4 +1,4 @@
-# Gummaa-Atlas: Cognitive Multi-Agent Historical Mapping System Quantum Secured Chat Assistant
+#  Cognitive Multi-Agent Historical Mapping System Quantum Secured Chat Assistant
 
 ## Overview
 Gummaa-Atlas is a multi-agent orchestration system designed to provide historical and geospatial context, focusing on Pan-African history, civilisations, and trade routes. Built using Python, it leverages **Google Gemini** for reasoning and content generation and **LanceDB** for a time-travel capable, persistent cognitive memory lakehouse. The system uses a multi-agent architecture (Coordinator, GraphAgent, DiscovAgent, Synthesizer) to break down user queries, correlate historical facts, discover geographical data, and synthesize a coherent, scholarly response.
