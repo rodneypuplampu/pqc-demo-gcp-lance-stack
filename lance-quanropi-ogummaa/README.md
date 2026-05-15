@@ -1,4 +1,4 @@
-# Secure-Cloud-Encryption Powered by Quantropi QiSpace™
+# Secure-Cloud-Encryption Powered by Quantropi QiSpace, LanceDB, and Gemini
 
 A highly secure, quantum-resistant application for encrypting files before they are uploaded to the cloud, as well as securely decrypting files shared within an encryption group. 
 
